@@ -112,4 +112,5 @@ GIT COMMANDS
 * git status                                               ---------------------------------------> Command to show which file is tracking it will show green clour which the file is tracking the file means 
 * git add filename                                         ---------------------------------------> Command to track the file and it is in stagging area
 * git commit -m "message/description" filename             ---------------------------------------> Command to commit the file with message in "" quotes 
-* git 
+* git log                                                  ---------------------------------------> Command to view how many commits we have done
+* git show commit id                                       ---------------------------------------> Command to show all details of the commit id 
