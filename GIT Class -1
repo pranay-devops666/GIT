@@ -23,4 +23,93 @@ and also maintains multiple versions of the same file
 * It is written on C programming.
 * It came on the year 2005.
 
+VCS HISTORY can say/explain in 5 ways
+======================================
 
+1. SCCM (Source Code Control Management) in 1972
+Source Code Control To Track Only One File
+
+2. RCS (Revision Control System)
+Track multiple files nut not directories
+
+3. CVS (Concurent Version System)
+Track multiple files and directories but single user
+
+4. SVN(Sub version)
+Track multiple files and directories in 2000
+
+5. GIT in 2005
+Distributed version control system
+
+
+WHY GIT
+=========
+
+* If client asks you to develop application
+*Based on the client requirement you can develop according to client requirements
+*You released version of the appliation
+*One year later, the client comes to you and asks to change the options in the application.
+*But the application got failed, in this case you can rollback to the specific previous version
+
+*Git is a distributed version control system
+
+Git tracks changes you made, so you have a record of what has been done, and you can revert to specific versions it makes collection easily allowing changes by people to all merged into one source.
+
+
+
+
+
+GIT STAGES
+============
+
+1. WORKING DIRECTORY
+2. STAGING AREA
+3. REPOSITORY
+
+        working directory
+               |
+               |  git add
+               v
+           staging area
+               |
+               |  git commit
+               v
+            repository
+
+
+1. Working Directory     (when we do create a file that stage will be called as working directory, when we create a file it will be in working directory and it cannot be get track)
+=====================
+another name for this default files
+
+
+
+
+
+
+
+2. Staging Area      (if we do add a git for a file in that satge caleed as Staging Area, here file can be easily can get track)
+=================
+
+
+
+3. Repository   (if we do commit a git for a file then that stage called as repository) commit means doing saving a file 
+===============
+
+
+
+
+
+
+GIT COMMANDS
+================
+
+* yum install git -y                                       ---------------------------------------> Command to install git in a server
+* git -v                                                   ---------------------------------------> Command to view git version
+* git --version                                            ---------------------------------------> Command to view git version
+* rpm -qa git                                              ---------------------------------------> Command to view git version rpm (redhat package management)
+* git init                                                 ---------------------------------------> Command to initialize the git
+* git status                                               ---------------------------------------> Command to check tracking or not
+* git status                                               ---------------------------------------> Command to show which file is tracking it will show green clour which the file is tracking the file means 
+* git add filename                                         ---------------------------------------> Command to track the file and it is in stagging area
+* git commit -m "message/description" filename             ---------------------------------------> Command to commit the file with message in "" quotes 
+* git 
