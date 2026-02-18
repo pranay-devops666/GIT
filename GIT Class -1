@@ -1,0 +1,26 @@
+GIT Class -1 
+
+Topic: GIT INTRODUCTION, GIT STAGES, AND COMMIT A FILE
+
+GIT ----------- GIT INFORMATION TRACKER
+SCN ----------- SOURCE CODE MANAGEMENT
+
+ROLLBACK 
+=========
+
+It means getting back to the previous version 
+
+Git is nothing but gobal information tracker, it will used to track the files 
+and also maintains multiple versions of the same file
+
+
+* Git is used to track the files.
+* It will maintain multiple versions of the same file.
+* It is platform-independent.
+* It is free and open source.
+* They can handle larger projects efficiently.
+* It is 3rd generation of vcs.
+* It is written on C programming.
+* It came on the year 2005.
+
+
