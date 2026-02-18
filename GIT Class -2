@@ -2,3 +2,42 @@ GIT Class -2
 
 
 TOPIC: GIT LOG, GIT IGNORE, GIT CONFIG, GIT RESET, GIT RM
+
+
+GIT COMMANDS
+=============
+
+-  git add * or git add .
+difference b/w git add * and git add .
+
+git add * ------------> this means command to track all files
+git add . ------------> this means command to track hidden files also
+
+* git status ------------> command to know files are tracking are not
+* git commit -m "all files are commiting at a time" . ------------------> command to track all fies and . represents which are present in stagging area
+* git log                                      --------------------------> command to know which are commits
+* vim .gitignore                     ----------------> command to keep the file which should not be track 
+* git rm --cached filename           -----------------> command to untrack the file (used to unstage the files means untrack)
+* git restored --staged filename     -----------------> alternative command to untrack the file (used to unstage the files means untrack)
+* git log                            -----------------> command to show git commits history also
+* git log -2                         -----------------> command to see latest 2 commits
+* git log -4                         -----------------> command to see latest 4 commits
+* git log -1                         -----------------> command to see latest 1 commits
+* git log --oneline                  -----------------> command to view commit ids and commit messages only with half commit id only
+* git log --pretty=oneline           -----------------> command to view commit ids and commit messages only with full commit id only
+* git config user.name "username"    -----------------> command to configure to add our name and to view root user with our name
+* git config user.email "email"      -----------------> command to configure to add our email and to view root email as  with our email name
+* git log --follow --all filename    -----------------> command to view how many commands are done for the particular file
+
+git reset
+===========
+this command is used to delete latest commits
+
+* git reset --hard HEAD~1           ----------------> command to used to delete latest commit along with changes 
+* git reset --soft HEAD~1             ----------------> command to used to delete only latest commit
+* git update-ref -d HEAD            ----------------> used to delete all commits at a time (only commits)
+* git reflog                        ----------------> command to get commit id which we forgot usually used to get the deleted commit id 
+
+HARD means ------------------> what will happen means commit and data will be also deleted 
+SOFT means ------------------> what will happen means only commit will be get deleted
+
