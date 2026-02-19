@@ -45,7 +45,18 @@ GITHUB COMMANDS
 * git push -u origin branch1 branch2             --------------------> command to used to push the code to multiple branches
 * git push -u origin --all                       --------------------> command to used to push the code to all branches at a time
 * git clone repo-url                             --------------------> command to used to get the code from central to local
-git pull origin branch                           --------------------> command to used to get the changes from central to local
+* git pull origin branch                           --------------------> command to used to get the changes from central to local
 
+real-time commands
 
+* git clone github-url                 -----------------> command to get the code from github to git in ec2-instance
+* git push origin branchname           -----------------> command to push the code from git ec2-instance to github (local to central)
+after giving above command it will credentials of github
+userame:
+password: here password means need to generate the token in github
+* git push -u origin branch-name      ------------------> command to push the code from git ec2-instance to github (local to central)
+after giving above command it will credentials of github
+userame:
+password:  here password means need to generate the token in github
 
+login successful
