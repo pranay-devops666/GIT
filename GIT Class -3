@@ -155,7 +155,7 @@ Date:   Thu Feb 19 06:29:39 2026 +0000
     This reverts commit 7578d1435db235abafe7abedba48c5f702a45f07.
 
 
-GITHUB
+GIT BRANCHES
 ==============
 
 [root@ip-172-31-29-147 mygitfolder]# git branch      -----------------------> command to view on which branch we are in and also to view list of branches
@@ -163,4 +163,15 @@ GITHUB
 [root@ip-172-31-29-147 mygitfolder]# 
 
 GIT MERGE --------------> means to get the changes from one branch to another branch
+
+* git branch newbranchname             ------------------------> command to create a new branch
+* git branch                           ------------------------> command to view on which branch we are in and also to view list of branches
+* git checkout branchname              ------------------------> command toswitvh from one branch to another
+* git merge branchname(from which branch we need to get filees)     -------------------------> command to do merge (getting files from one brsnch to another branch)
+files we may get only commited files, which we didn't done commit we didn't get that files
+
+* git branch -d branchname         -----------------------------> command to delete the branch
+* git branch -D branchname         -----------------------------> command to delete the branch alternative way (-D means forcefully delete)
+* git branch -b newbranchname      -----------------------------> commnd to create a branch and swith to the created branch at a time
+* git branch -m oldbranchname newbranchname        ------------------------> command to modify the old branch name to new branch name
 
