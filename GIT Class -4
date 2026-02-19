@@ -11,4 +11,8 @@ GIT COMMANDS
 * git init                               ---------------------> command to initialize git
 * git checkout -b newbranchname          ---------------------> command to create a new branch and switch to that created new branch as well
 * git cherry-pick commit-id              ---------------------> command to get the particular commit-id from one branch to another branch
-* git 
+* git restore filename                   ---------------------> command to get deleted file
+GIT STASH
+===========
+* git stash         ---------------------------------> command to save temporary files in created branch
+* git stash apply 
