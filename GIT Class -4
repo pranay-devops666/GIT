@@ -14,5 +14,17 @@ GIT COMMANDS
 * git restore filename                   ---------------------> command to get deleted file
 GIT STASH
 ===========
-* git stash         ---------------------------------> command to save temporary files in created branch
-* git stash apply 
+By using GIT stash command, developers can temporarily save changes made in the working directory. It allows them to quickly switch contexts when they are not quite 
+ready to commit changes.And it allows them to more easily switch between branches.
+
+Generally, the stash meaning is "store something safely in a hidden place"
+
+* git stash       -----------------------> command to delete the changes permanently
+* git stash save "message"     ----------------> command to save the stash along with the message
+* git stash apply              ----------------> command to back the data again
+* git stash list               ----------------> command to get the lists of stashes
+* git stash clear              ----------------> command to clear all the stashes
+* git stash pop                ----------------> command to delete the first stash
+* git stash drop               ----------------> command to delete the latest stash
+* git stash drop stash@{2}     ----------------> command to delete a particular stash
+
