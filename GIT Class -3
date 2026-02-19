@@ -2,3 +2,165 @@ GIT Class -3
 
 
 TOPIC: GIT AMEND, GIT REVERT & GIT BRANCHES
+=============================================
+
+* yum install git -y    -----------------------------> command to install git
+* git init              -----------------------------> command to initialize the git
+* git add *             -----------------------------> command to commit all files at a time
+
+
+There is a possible way to change the author name for the recent commit (recent last commit only) by using AMEND command like below
+
+* git commit --amend --author "pranay <gorantlapranay8@gmail.com>"     -------------------> command to change the author name for the recent commit (recent last commit only) by using AMEND command
+after hitting the above command one file will open like below
+
+myntra file
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Thu Feb 19 05:59:16 2026 +0000
+#
+# On branch master
+# Changes to be committed:
+#       new file:   myntra
+#
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+~                                                                                                                                                                        
+"~/mygitfolder/.git/COMMIT_EDITMSG" 11L, 265B
+
+dont do any changes in here kindly do save and continue
+:wq
+
+now give command git log
+
+[root@ip-172-31-29-147 mygitfolder]# git log
+commit 19fa3d070559ed06fcb89bfef8d15ceac02c9ec0 (HEAD -> master)
+Author: pranay <gorantlapranay8@gmail.com>
+Date:   Thu Feb 19 05:59:16 2026 +0000
+
+    myntra file
+
+commit a6bcb3eb73c47a25a9c397873a0dd1a93eb35207
+Author: root <root@ip-172-31-29-147.ec2.internal>
+Date:   Thu Feb 19 05:59:02 2026 +0000
+
+    flipkart file
+
+commit 0d40cb6af4865623dac070cebb5ef3922ffa6ecc
+Author: root <root@ip-172-31-29-147.ec2.internal>
+Date:   Thu Feb 19 05:58:34 2026 +0000
+
+    amazon file
+[root@ip-172-31-29-147 mygitfolder]# 
+
+
+Now the author has been changed for the latest commit
+
+previously we have changed the author name
+
+Now can we able to change the commit message -------> yes
+
+* git git commit --amend --m "this is my new message"       -----------------> command to change message for the latest commit only
+here in above command we dont need to mention file name by-defult it will take the latest commit
+
+By using Revert Command we can do delete any particular commit like below
+
+* git update-ref -d HEAD      --------------------------> command to delete all commits what we have done, but files shouldnot get deleted
+[root@ip-172-31-29-147 mygitfolder]# git update-ref -d HEAD
+[root@ip-172-31-29-147 mygitfolder]# git log
+fatal: your current branch 'master' does not have any commits yet
+[root@ip-172-31-29-147 mygitfolder]# 
+
+[root@ip-172-31-29-147 mygitfolder]# git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   amazon
+        new file:   flipkart
+        new file:   myntra
+
+[root@ip-172-31-29-147 mygitfolder]# 
+
+Now files are in stagging area
+
+[root@ip-172-31-29-147 mygitfolder]# git commit -m "dev1 created amozon file" amazon
+[master (root-commit) 4001434] dev1 created amozon file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 amazon
+[root@ip-172-31-29-147 mygitfolder]# git commit -m "dev2 created flipkart file" flipkart
+[master 7578d14] dev2 created flipkart file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 flipkart
+[root@ip-172-31-29-147 mygitfolder]# git commit -m "dev2 created myntra file" myntra
+[master f60ed34] dev2 created myntra file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 myntra
+[root@ip-172-31-29-147 mygitfolder]#
+
+
+REVERT means doing changes everything for a particular commit
+
+[root@ip-172-31-29-147 mygitfolder]# git log
+commit f60ed34d02eecfcffd8ee804ce855becda0f2348 (HEAD -> master)
+Author: pranay <gorantlapranay8@gmail.com>
+Date:   Thu Feb 19 06:27:43 2026 +0000
+
+    dev2 created myntra file
+
+commit 7578d1435db235abafe7abedba48c5f702a45f07
+Author: pranay <gorantlapranay8@gmail.com>
+Date:   Thu Feb 19 06:27:29 2026 +0000
+
+    dev2 created flipkart file
+
+commit 40014342954fd1a9553c90b366be0071c394a71d
+Author: pranay <gorantlapranay8@gmail.com>
+Date:   Thu Feb 19 06:26:54 2026 +0000
+
+    dev1 created amozon file
+[root@ip-172-31-29-147 mygitfolder]# 
+
+[root@ip-172-31-29-147 mygitfolder]# git revert 7578d1435db235abafe7abedba48c5f702a45f07
+After giving the above command one file will be open 
+
+no need to made any changes there just do save and continue
+
+:wq
+
+[root@ip-172-31-29-147 mygitfolder]# git log
+commit 5244e487b8ae895d8fb569bf371432382e886a25 (HEAD -> master)
+Author: pranay <gorantlapranay8@gmail.com>
+Date:   Thu Feb 19 06:29:39 2026 +0000
+
+    Revert "dev2 created flipkart file"
+    
+    This reverts commit 7578d1435db235abafe7abedba48c5f702a45f07.
+
+
+GITHUB
+==============
+
+[root@ip-172-31-29-147 mygitfolder]# git branch      -----------------------> command to view on which branch we are in and also to view list of branches
+* master -----------------> this is the default branch
+[root@ip-172-31-29-147 mygitfolder]# 
+
+GIT MERGE --------------> means to get the changes from one branch to another branch
+
