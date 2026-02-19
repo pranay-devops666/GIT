@@ -2,3 +2,13 @@ GIT Class -4
 
 
 TOPIC: GIT CHERRY-PICK, GIT RESTORE, GIT STASH & GITHUB INTRODUCTION
+
+
+GIT COMMANDS
+=============
+
+* yum install git                        ---------------------> command to install git
+* git init                               ---------------------> command to initialize git
+* git checkout -b newbranchname          ---------------------> command to create a new branch and switch to that created new branch as well
+* git cherry-pick commit-id              ---------------------> command to get the particular commit-id from one branch to another branch
+* git 
